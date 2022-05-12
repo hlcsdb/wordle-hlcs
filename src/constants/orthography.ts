@@ -1,0 +1,58 @@
+import { CONFIG } from './config'
+
+export const ORTHOGRAPHY = [
+"’",
+"a",
+"aa",
+"ch",
+"ch’",
+"e",
+"ee",
+"h",
+"hw",
+"i",
+"ii",
+"k",
+"k’",
+"kw",
+"kw’",
+"l",
+"l’",
+"lh",
+"m",
+"m’",
+"n",
+"n’",
+"o",
+"oo",
+"ou",
+"p",
+"p’",
+"q",
+"q’",
+"qw",
+"qw’",
+"s",
+"sh",
+"t",
+"t’",
+"th",
+"tl’",
+"ts",
+"ts’",
+"tth",
+"tth’",
+"u",
+"w",
+"w’",
+"x",
+"xw",
+"y",
+"y’",
+]
+
+if (CONFIG.normalization) {
+  ORTHOGRAPHY.forEach(
+    (val, i) => (ORTHOGRAPHY[i] = val.normalize(CONFIG.normalization))
+  )
+}
